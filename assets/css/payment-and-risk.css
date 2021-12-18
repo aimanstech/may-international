@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@400;500;700&display=swap'); 
 
 html {
     --primary-color: #cb252b;
-    --secondary-color: #2f2e7a;
-    --font-amiri: 'Amiri', serif;
-    --font-open-sans: 'Open Sans', sans-serif;
+    --secondary-color: #143a67;
+    --font-amiri: 'Noto Sans Display', sans-serif;
+    --font-open-sans: 'Noto Sans Display', sans-serif;
 }
+
 
 /* custom scrollbar  */
 
@@ -317,8 +318,8 @@ header {
 
 .nav-logo img {
     width: 70%;
+    margin-top: 10px;
 }
-
 /* custom dropdown menu  */
 
 .dropbtn {
@@ -414,8 +415,9 @@ a {
 
 /* hero section design  */
 .hero-banner {
-    background-image: url(../images/blog/ship-container-2.png);
+    background-image: url(../images/unsplash.jpg);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     padding: 5rem 0;
     object-fit: cover;

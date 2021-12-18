@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@400;500;700&display=swap');
 
 html {
     --primary-color: #cb252b;
-    --secondary-color: #2f2e7a;
-    --font-amiri: 'Amiri', serif;
-    --font-open-sans: 'Open Sans', sans-serif;
+    --secondary-color: #143a67;
+    --font-amiri: 'Noto Sans Display', sans-serif;
+    --font-open-sans: 'Noto Sans Display', sans-serif;
 }
 
 /* custom scrollbar  */
@@ -35,7 +35,7 @@ html {
 }
 
 body {
-    font-family: var(--font-amiri)
+    font-family: 'Noto Sans Display', sans-serif;
 }
 
 a {
@@ -50,7 +50,8 @@ p {
     font-size: 1.2rem;
     color: rgb(83, 83, 83);
     font-weight: 400;
-    font-family: var(--font-open-sans);
+    font-family: 'Noto Sans Display', sans-serif;
+    ;
     margin: 1.5rem 0;
 }
 
@@ -62,7 +63,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-amiri);
+    font-family: 'Noto Sans Display', sans-serif;
     text-transform: capitalize;
 }
 
@@ -72,7 +73,7 @@ h1 {
 }
 
 h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 600;
     color: var(--primary-color);
 }
@@ -294,7 +295,7 @@ nav {
 
 .nav-links a {
     color: var(--secondary-color);
-    padding: .5rem 1rem;
+    padding: 1rem 1rem;
     font-size: 1.2rem;
     transition: all .2s linear;
 }
@@ -318,6 +319,7 @@ header {
 
 .nav-logo img {
     width: 70%;
+    margin-top: 10px;
 }
 
 /* custom dropdown menu  */
@@ -396,6 +398,7 @@ header {
 .video-container {
     position: absolute;
     right: 0;
+    top: 0;
     bottom: 0;
     width: 100%;
     min-height: 100%;
@@ -408,14 +411,15 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 99%;
+    height: 100%;
     background: linear-gradient(to left, #cb252ab7, #2f2e7ac0);
     z-index: 0;
 }
 
 .hero-content {
-    width: 50%;
+    /* width: 50%; */
     z-index: 99;
+    text-align: center;
 }
 
 .hero-content h1 {
@@ -428,6 +432,9 @@ header {
 
 .hero-content p {
     color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 10px;
 }
 
 /*homepage what we do?  */
@@ -451,13 +458,19 @@ header {
 }
 
 .box-gradient {
-    background: linear-gradient(to top, #cb252a, #2f2e7a);
+    background: linear-gradient(to top, #cb252b, #2f2e7a);
     color: white;
-    margin: 0 1.5rem;
+    margin: 0 2rem;
+    border-bottom: 8px solid #cb252b;
+    transition: all .5s;
 }
 
-.box-gradient p {
-    color: white;
+.box-gradient:hover,
+.box-normal:hover {
+    transform: translateY(-10px);
+    transform: scale(1.2);
+    border-bottom: 8px solid white;
+
 }
 
 .box-gradient .bx {
@@ -466,7 +479,24 @@ header {
 }
 
 .box-normal {
-    margin: 0 1.5rem;
+    background: linear-gradient(to top, #2f2e7a, #cb252b);
+    margin: 0 2rem;
+    border-bottom: 8px solid #2f2e7a;
+    transition: all .5s;
+}
+
+.box-normal h4 a {
+    color: white;
+    transition: all .5s;
+}
+
+.box-normal h4 a:hover {
+    opacity: .8;
+    color: white;
+}
+
+.service-h4 a {
+    font-size: 1.6rem;
 }
 
 @media (max-width:1200px) {
@@ -578,7 +608,7 @@ h4 a {
     min-height: 50vh;
     display: grid;
     place-content: center;
-    background: url(../images/container3.jpg);
+    background: url(../images/unsplash.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -596,7 +626,7 @@ h4 a {
 }
 
 .title-newsletter {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
@@ -622,7 +652,7 @@ input::placeholder {
 
 /* footer  */
 
-footer h5 {
+/* footer h5 {
     font-size: 1.8rem;
     font-weight: bold;
     color: var(--secondary-color);
@@ -685,6 +715,38 @@ footer p {
 
 .footer-text {
     margin-top: 1rem;
+} */
+
+
+footer {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+footer ul {
+    padding-left: 0;
+}
+
+footer ul li {
+    padding: 0.3rem 0;
+}
+
+.rignt-menu {
+    padding-right: 3rem;
+}
+
+footer a {
+    font-size: 1rem;
+}
+
+.footer-social-icons i {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.footer-social-icons i:hover {
+    color: var(--primary-color);
 }
 
 .footer-copyright {
